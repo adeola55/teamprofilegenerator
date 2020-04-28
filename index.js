@@ -208,5 +208,13 @@ function generateHtml(){
     }
     console.log("Engineer",engineerHTML)
     htmlCode = htmlCode + engineerHTML
-
+    htmlCode = htmlCode + `</body>
+    </html>
+    `
+fs.writeFile("./output/teamprofile.html",htmlCode,function(err,data){
+  if (err)  throw err;
+  console.log("File Generated");
+  console.log("GoodBye, See you soon!")
+  process.exit(0)
+})
 }
