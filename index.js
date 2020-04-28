@@ -121,7 +121,6 @@ function addEngineer(){
   .then (function(userInput){
     var engineer = new Engineer(userInput.engineerName,userInput.engineerId,userInput.engineerEmail,userInput.engineerGithub)
     engineerList.push(engineer)
-    console.log(engineerList)
     userChoices()
   })
 }
@@ -163,16 +162,15 @@ function generateHtml(){
                         <ul class="list-group">
                             <li class="list-group-item">ID: ${managerList[i].id}</li>
                             <li class="list-group-item">Email: <a href="mailto:${managerList[i].email}">${managerList[i].email}</a></li>
-                            <li class="list-group-item">Office number: ${managerList[i].OfficeNumber}</li>
+                            <li class="list-group-item">Office number: ${managerList[i].officeNumber}</li>
                         </ul>
                     </div>
                 </div>`
       }
-      console.log(managerHTML)
+      // console.log(managerHTML)
       htmlCode = htmlCode + managerHTML
       var internHTML = ""
       for(let i=0; i<internList.length;i++){
-                  console.log(internList[i])
                   internHTML = internHTML + `<div class="card employee-card">
                   <div class="card-header">
                       <h2 class="card-title">${internList[i].name}</h2>
@@ -187,11 +185,10 @@ function generateHtml(){
                   </div>
               </div>`
       }
-    console.log(internHTML)
+    // console.log(internHTML)
     htmlCode = htmlCode + internHTML
     var engineerHTML =""
     for(let i=0; i< engineerList.length; i++){
-            console.log(engineerList[i])
             engineerHTML = engineerHTML + `<div class="card employee-card">
             <div class="card-header">
                 <h2 class="card-title">${engineerList[i].name}</h2>
@@ -206,7 +203,7 @@ function generateHtml(){
             </div>
         </div>`
     }
-    console.log("Engineer",engineerHTML)
+    // console.log("Engineer",engineerHTML)
     htmlCode = htmlCode + engineerHTML
     htmlCode = htmlCode + `</body>
     </html>
