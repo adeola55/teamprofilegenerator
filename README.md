@@ -16,7 +16,7 @@
 
 
 ## how team profile is generated
-
+using node, user is promoted to select options between engineer, manager or intern. afterwards, information is inputed and all this information appears on the output html when the app is exited from. 
 
 
 
